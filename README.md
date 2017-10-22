@@ -8,17 +8,20 @@ The idea of this project is to provide a simple cucumber test implementation
 ## Expected NPM Packages:
 a) Cucumber - Core Behavior Driven Development / Test facilitator
 b) Gulp - Gulp will be used to run the application ex: $gulp httptest
+c) express - run the express web application
 c) node-fetch, build-url - These packages will help us to GET/POST HTTP calls
 d) jsonpath, unexpected - Used to validate json response
 
 ##Install the following
-1) npm install cucumber
-2) npm install gulp
-3) npm install gulp-cli
-4) npm install node-fetch
-5) npm install build-url
-6) npm install jsonpath
-7) npm install unexpected
+1) npm install cucumber -g
+2) npm install gulp -g
+3) npm install gulp-cli -g
+4) npm install express -g
+5) npm install body-parser -g
+4) npm install node-fetch -g
+5) npm install build-url -g
+6) npm install jsonpath -g
+7) npm install unexpected -g
 
 ## Running examples
 The example can be run by running the sample node server along with Gulp by calling as follows

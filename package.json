@@ -1,5 +1,5 @@
 {
-  "name": "Cucumber http post",
+  "name": "Cucumber_http_post",
   "version": "1.0.0",
   "description": "http post examples",
   "main": "server.js",
@@ -7,7 +7,7 @@
     "httptest": "cucumber.js httptest/features -r httptest/steps"
   },
   "author": "Shiva Ramani <shiva.ramani@live.com>",
-  "license": "ISC",
+  "license": "open",
   "dependencies": {
     "body-parser": "^1.18.2",
     "chai": "^3.5.0",
