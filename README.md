@@ -16,12 +16,13 @@ d) jsonpath, unexpected - Used to validate json response
 1) npm install cucumber -g
 2) npm install gulp -g
 3) npm install gulp-cli -g
-4) npm install express -g
-5) npm install body-parser -g
-4) npm install node-fetch -g
-5) npm install build-url -g
-6) npm install jsonpath -g
-7) npm install unexpected -g
+4) npm install gulp-shell -g
+5) npm install express -g
+6) npm install body-parser -g
+7) npm install node-fetch -g
+8) npm install build-url -g
+9) npm install jsonpath -g
+10) npm install unexpected -g
 
 ## Running examples
 The example can be run by running the sample node server along with Gulp by calling as follows
@@ -38,3 +39,4 @@ $ gulp httptest
 npm run-script httptest  # not working
 
 ## gulpfile.js has reference of "cucumber_js" instead of "cucumber.js" - This is a known implementation due to a possible cucumber bug
+if cucumber_js did not work, please try changing it to cucumber.js (works in linux)
