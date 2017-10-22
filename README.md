@@ -6,32 +6,32 @@ The idea of this project is to provide a simple cucumber test implementation
 
 
 ## Expected NPM Packages:
-Cucumber - Core Behavior Driven Development / Test facilitator
-Gulp - Gulp will be used to run the application ex: $gulp httptest
-node-fetch, build-url - These packages will help us to GET/POST HTTP calls
-jsonpath, unexpected - Used to validate json response
+a) Cucumber - Core Behavior Driven Development / Test facilitator
+b) Gulp - Gulp will be used to run the application ex: $gulp httptest
+c) node-fetch, build-url - These packages will help us to GET/POST HTTP calls
+d) jsonpath, unexpected - Used to validate json response
 
 ##Install the following
-npm install cucumber
-npm install gulp
-npm install gulp-cli
-npm install node-fetch
-npm install build-url
-npm install jsonpath
-npm install unexpected
+1) npm install cucumber
+2) npm install gulp
+3) npm install gulp-cli
+4) npm install node-fetch
+5) npm install build-url
+6) npm install jsonpath
+7) npm install unexpected
 
 ## Running examples
 The example can be run by running the sample node server along with Gulp by calling as follows
 
-# run the node http server
-$ cd httptest\server
-$ node server.js
+## run the node http server
+a) Change directory - $ cd httptest\server
+b) $ node server.js
 
-# run gulp for testing the feature files
+## run gulp for testing the feature files
 $ gulp httptest
 
-# known issues
-# below is not working - ONLY "gulp httptest" works
+## known issues
+## below is not working - ONLY "gulp httptest" works
 npm run-script httptest  # not working
 
-# gulpfile.js has reference of "cucumber_js" instead of "cucumber.js" - This is a known implementation due to a possible cucumber bug
+## gulpfile.js has reference of "cucumber_js" instead of "cucumber.js" - This is a known implementation due to a possible cucumber bug
