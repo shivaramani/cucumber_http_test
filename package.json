@@ -1,0 +1,22 @@
+{
+  "name": "Cucumber http post",
+  "version": "1.0.0",
+  "description": "http post examples",
+  "main": "server.js",
+  "scripts": {
+    "httptest": "cucumber.js httptest/features -r httptest/steps"
+  },
+  "author": "Shiva Ramani <shiva.ramani@live.com>",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "chai": "^3.5.0",
+    "cucumber": "^2.1.0",
+    "gulp": "^3.9.1",
+    "gulp-install": "^1.1.0",
+    "gulp-shell": "^0.6.3"
+  },
+  "devDependencies": {
+    "gulp-install": "^1.1.0"
+  }
+}
