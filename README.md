@@ -13,18 +13,22 @@ c) node-fetch, build-url - These packages will help us to GET/POST HTTP calls
 d) jsonpath, unexpected - Used to validate json response
 
 ##Install the following
+Run - "npm install" to accomplish the installation of these
+
+If you want to run individually, you may run these with -g / --save-dev options to have it run locally
+
 1) npm install cucumber
    npm install -g cucumber
    npm install --save-dev cucumber
-2) npm install gulp (try with -g options if need be)
-3) npm install gulp-cli (try with -g options if need be)
-4) npm install gulp-shell (try with -g options if need be)
-5) npm install express (try with -g options if need be)
-6) npm install body-parser (try with -g options if need be)
-7) npm install node-fetch (try with -g options if need be)
-8) npm install build-url (try with -g options if need be)
-9) npm install jsonpath (try with -g options if need be)
-10) npm install unexpected (try with -g options if need be)
+2) npm install gulp
+3) npm install gulp-cli
+4) npm install gulp-shell
+5) npm install express
+6) npm install body-parser
+7) npm install node-fetch
+8) npm install build-url
+9) npm install jsonpath
+10) npm install unexpected
 
 ## Running examples
 The example can be run by running the sample node server along with Gulp by calling as follows
