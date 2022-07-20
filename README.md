@@ -20,29 +20,25 @@ If you want to run individually, you may run these with -g / --save-dev options 
 1) npm install cucumber
    npm install -g cucumber
    npm install --save-dev cucumber
-2) npm install gulp
-3) npm install gulp-cli
-4) npm install gulp-shell
-5) npm install express
-6) npm install body-parser
-7) npm install node-fetch
-8) npm install build-url
-9) npm install jsonpath
-10) npm install unexpected
+2) npm install -g gulp
+3) npm install -g gulp-cli
+4) npm install -g gulp-shell
+5) npm install -g express
+6) npm install -g body-parser
+7) npm install -g node-fetch
+8) npm install -g build-url
+9) npm install -g jsonpath
+10) npm install -g unexpected
 
 ## Running examples
 The example can be run by running the sample node server along with Gulp by calling as follows
 
 ## run the node http server
-a) Change directory - $ cd httptest\server
-b) $ node server.js
+```
+  node server\server.js
+```
 
-## run gulp for testing the feature files
-$ gulp httptest
-
-## known issues
-## below is not working - ONLY "gulp httptest" works
-npm run-script httptest  # not working
-
-## gulpfile.js has reference of "cucumber_js" instead of "cucumber.js" - This is a known implementation due to a possible cucumber bug
-if cucumber_js did not work, please try changing it to cucumber.js (works in linux)
+## run gulp for testing the feature files - on another tab/terminal
+```
+   npm run-script httptest
+```

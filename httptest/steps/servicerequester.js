@@ -1,5 +1,4 @@
 const fetch = require('node-fetch');
-const buildUrl = require('build-url');
 const port = 3000;
 const baseUrl = 'http://localhost:' + port;
 
@@ -8,9 +7,7 @@ let serviceResponse;
 
 // Perform a GET request to the server
 function get(url) {
-    const realUrl = buildUrl(baseUrl, {
-        path: url
-    });
+    const realUrl = new URL(url, baseUrl);
     const headers = {};
    serviceResponse = fetch(realUrl, { headers: headers })
         .then((res) => {
@@ -36,14 +33,12 @@ function get(url) {
 
 // Perform a POST request to the server
 function post(url, body) {
-    const realUrl = buildUrl(baseUrl, {
-        path: url
-    });
+    const realUrl = new URL(url, baseUrl);
 
     const headers = {};
     headers['content-type'] = 'application/json';
 
-    console.log('My Log - POST URL - ' + realUrl);
+    //console.log('My Log - POST URL - ' + realUrl);
     serviceResponse = fetch(realUrl, { method: 'POST', headers: headers, body: JSON.stringify(body) })
         .then((res) => {
             let bodyPromise;
@@ -55,7 +50,7 @@ function post(url, body) {
             }
 
             return bodyPromise.then((body) => {
-                console.log('My Log - POST body response - ' + JSON.stringify(body));
+                //console.log('My Log - POST body response - ' + JSON.stringify(body));
                 return {
                     status: res.status,
                     headers: res.headers.raw(),

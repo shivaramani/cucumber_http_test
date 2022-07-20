@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 
 app.get('/', (request, response) => {
   var resp = {
-    "name":"shiva",
+    "name":"User",
     "Answer":"get answer",
     "app":"100",
     "description":"cucumber http post",
@@ -22,7 +22,7 @@ app.post('/',function(req,res){
   var param2=req.body.param2;
   console.log("param1 = "+param1+", param2 is "+param2);
   var resp = {
-    "name":"shiva",
+    "name":"User",
     "answer":"post answer",
     "app":"100",
     "description":"cucumber http post",

@@ -1,5 +1,4 @@
-const defineSupportCode = require('cucumber').defineSupportCode;
-const jsonpath = require('jsonpath');
+const { When, Then} = require('@cucumber/cucumber');
 const expect = require('unexpected');
 const requester = require('./servicerequester');
 
@@ -11,24 +10,23 @@ const RESPONSE_PATHS = {
 var param1 = "";
 var param2 = "";
 
-defineSupportCode(function ({ When, Then }) {
     When('I retrieve the service response', function() {
         //console.log('My log - I retrieve the service response');
         return requester.post('', { param1: param1, param2: param2 });
     });
 
-    When('I update the service response to have first {stringInDoubleQuotes}', function (inputParam1) {
+    When('I update the service response to have first {string}', function (inputParam1) {
         //console.log('My log - I update the service response  to have name - param1 - ' + inputParam1 );
         param1 = inputParam1;
     });
 
     // And the service response has "param1" status
-    When('I update the service response to have second {stringInDoubleQuotes}', function (inputParam2) {
+    When('I update the service response to have second {string}', function (inputParam2) {
         //console.log('My log - I update theservice response to have name - param2 - ' + inputParam2 );
         param2 = inputParam2;
     });
 
-    Then('And the service response has {stringInDoubleQuotes} status}', function (expectedOutput, callback) {
+    Then('And the service response has {string} status}', function (expectedOutput, callback) {
       console.log('Expected output - ' +expectedOutput);
       callback(expectedOutput, pending);
     });
@@ -47,6 +45,7 @@ defineSupportCode(function ({ When, Then }) {
                   var app = serviceResponse.app;
                   var answer = serviceResponse.answer;
                   var type = serviceResponse.type;
+                  console.log('************************************')
                   console.log('name - ' + name + ': app - ' + app + ': answer - ' + answer + ': type - ' + type)
 
                   expectedOutput = (expectedString == answer);
@@ -71,13 +70,14 @@ defineSupportCode(function ({ When, Then }) {
                   var answer = serviceResponse.answer;
                   var type = serviceResponse.type;
                   serviceOutput = answer;
-                  console.log('name - ' + name + ': app - ' + app + ': answer - ' + answer + ': type - ' + type)
+                  //console.log('---------------------------------')
+                  //console.log('name - ' + name + ': app - ' + app + ': answer - ' + answer + ': type - ' + type)
               }
             }
 
             // for data table
 
-            console.log('My Log -Datatable Asertion after this ');
+            //console.log('My Log -Datatable Asertion after this ');
 
 
             if(expected && expected["answer"]){
@@ -99,4 +99,3 @@ defineSupportCode(function ({ When, Then }) {
             */
         });
     });
-});
