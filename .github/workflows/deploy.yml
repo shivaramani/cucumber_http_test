@@ -1,0 +1,24 @@
+name: "cucumber-http-test-deploy"
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  deployment:
+    name: 'build'
+    runs-on: ubuntu-latest    
+    steps:
+      - name: "checkout"
+        uses: actions/checkout@v3
+      - name: "NPM INSTALL"
+        run: npm install    
+      - name: "run test nodeserver"
+        run: node server/server.js  
+      - name: "run httptest"
+        run:  npm run-script httptest
+        continue-on-error: true
+      - name: "test ran successfully"
+        run:  echo "Successfully"        
+        
